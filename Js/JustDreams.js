@@ -16,7 +16,6 @@ function toggleLoginForm() {
     }
 }
 
-
 function toggleDropdown() {
     document.getElementById("languageDropdown").classList.toggle("show");
 }

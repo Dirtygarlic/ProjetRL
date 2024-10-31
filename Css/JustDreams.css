@@ -117,26 +117,25 @@
     }
 
    /* Debut du codage bouton rechercher-------------------------------------------------*/
-   .search-button2 {
-    border: none;
-    cursor: pointer;
-    font-size: 15px;
-    }
-
-     .search-form2 {
-        display: flex; /* Aligne le champ et le bouton en ligne */
+   .search-form2 {
+    display: flex; /* Aligne le champ et le bouton en ligne */
     }
 
     .search-input2 {
-        padding: 10px; /* Espacement interne du champ de saisie */
-        font-size: 15px;
-        border: 1px solid #ccc; /* Bordure du champ de saisie */
-        border-radius: 4px 0 0 4px; /* Arrondir les coins à gauche */
-        outline: none; /* Enlève le contour par défaut */
-        background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
-        color: RGB(146, 174, 201);
+    padding: 10px; /* Espacement interne du champ de saisie */
+    font-size: 15px;
+    border: 1px solid #ccc; /* Bordure du champ de saisie */
+    border-radius: 4px 0 0 4px; /* Arrondir les coins à gauche */
+    outline: none; /* Enlève le contour par défaut */
+    background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
+    color: RGB(146, 174, 201);
+    cursor: pointer;
+}
+   .search-button2 {
+    border: none;
+    font-size: 15px;
     }
-    
+
      /* Style du bouton pour modifier la langue */
      .dropbtn {
         background-color: #4CAF50; /* Définit la couleur de fond du bouton en vert */
