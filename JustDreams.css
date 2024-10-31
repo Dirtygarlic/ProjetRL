@@ -118,16 +118,11 @@
 
    /* Debut du codage bouton rechercher-------------------------------------------------*/
    .search-button2 {
-    background-color : #f0f0f0; /* Couleur de fond du header */
     border: none;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 15px;
     }
 
-    .search-button2 i {
-    color: #333; /* Couleur de l'icône */
-        }
-  
      .search-form2 {
         display: flex; /* Aligne le champ et le bouton en ligne */
     }
