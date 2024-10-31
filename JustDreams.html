@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="booking, reservation, motel, hotel, car, voiture, boat, bateau, restaurant, flight, vols"> <!-- je ne sais pas trop quoi mettre ici -->
+        <meta name="description" content="JustDreams — Trouvez l'hébergement Idéal sur JustDreams.com, le Plus Grand Site de Voyages au Monde. Des Réservations Faciles, Rapides, Sécurisées et Sans Frais, et un Tarif Garanti. Motels.">  
+        <title> JustDreams - Réservez votre prochain voyage  </title>
+        <link rel="stylesheet" href="JustDreams.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+   </head>
+
+   <body>
+        <!-- En-tête du site -->
+        <header> 
+            <div>
+                <img src="JustDreamslogo.jpg" alt="Logo du site JustDreams" class="image2">
+           </div>
+
+            <button type="submit" class="search-button1" onclick="toggleLoginForm()">Se connecter / S'incrire</button>
+
+            <div id="overlay" class="overlay"></div>
+            <div id="loginForm" class="reservation-container">
+                <div class="close-modal" onclick="toggleLoginForm()">&times;</div>                   
+                <h2>Se connecter / S'inscrire</h2>
+                <form>
+                    <label for="username">Nom d'utilisateur:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Mot de passe:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe1" name="rememberMe">
+                        <label class="rememberMe2">Se rappeler de moi</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Se connecter</button>
+
+                    <button type="button" class="forgot-password" onclick="resetPassword()">Mot de passe oublié</button>
+
+                    <button type="button" class="create-account" onclick="createAccount()">Créer un compte</button>
+
+                    <div class="close-modal" onclick="toggleLoginForm()">&times;</div>
+                </form>
+    
+            </div>
+
+        <!--  <form class="search-form2">
+                <input type="text" placeholder="" class="search-input2">
+                <button type="submit" class="search-button2">Rechercher</button>
+            </form> -->
+
+            <form action="/search" method="get" class="search-form2">
+                <input type="text" placeholder="Destination de vos rêves?" class="search-input2">
+                <button type="submit">
+                    <i class="fas fa-search"></i> <!-- Icône de loupe -->
+                </button>
+            </form>
+
+            <div class="dropdown">
+                <button onclick="toggleDropdown()" class="dropbtn">Langue</button>
+                <div id="languageDropdown" class="dropdown-content">
+                    <a href="#" onclick="changeLanguage('fr')">Français</a>
+                    <a href="#" onclick="changeLanguage('en')">English</a>
+                    <a href="#" onclick="changeLanguage('es')">Español</a>
+                    <a href="#" onclick="changeLanguage('zh')">中文 (Zhōngwén)</a>
+                    <a href="#" onclick="changeLanguage('ar')">العربية (al-‘Arabīyah)</a>
+                    <a href="#" onclick="changeLanguage('hi')">हिंदी (Hindī)</a>
+                    <a href="#" onclick="changeLanguage('bn')">বাংলা (Bāṅlā)</a>
+                    <a href="#" onclick="changeLanguage('ru')">русский (russkiy)</a>
+                    <a href="#" onclick="changeLanguage('pt')">português</a>
+                    <a href="#" onclick="changeLanguage('ur')">اُردُو (Urdū)</a>
+                </div>
+            </div>
+
+        </header>
+        <!--fin de l en-tête du site-->
+
+            <!-- Bandeau qui sert à inserer plusieurs boutons -->
+            <nav class="button-bar">
+                <button class="nav-button">Notre rêve</button>
+                <button class="nav-button">Hôtels</button>
+                <button class="nav-button">Vols</button>
+                <button class="nav-button">Hôtels + Vols</button>
+                <button class="nav-button">Voitures</button>
+                <button class="nav-button">Restaurants</button>
+                <button class="nav-button">Bateaux</button>
+                <button class="nav-button">Promotions</button>
+                <button class="nav-button">Les meilleurs avis</button>
+                <button class="nav-button">Contacts</button>
+            </nav>
+
+          <!-- Insertion d'un arriere plan grâce à une div -->
+        <div class="background-image">
+            <!-- Vous pouvez ajouter du contenu ici, si nécessaire -->
+            <h1>Bienvenue sur Just Dreams</h1>
+            <p>Vivez vos rêves</p>
+
+        </div>
+        <script type="text/javascript" src="JustDreams.js"></script>
+   </body>
+
+   <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p1><strong>Adresse :</strong> 123 Rue Exemple, Paris, France</p1><br>
+                <p1><strong>Téléphone :</strong> +33 1 23 45 67 89</p1><br>
+                <p1><strong>Email :</strong> justdreams@gmail.com</p1>
+            </div>
+
+            <div class="useful-links">
+                <h3>Liens Utiles</h3>
+                <ul>
+                    <li><a href="/mentions-legales">Mentions légales</a></li>
+                    <li><a href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+                    <li><a href="/cgv">Conditions Générales de Vente</a></li>
+                </ul>
+            </div>
+
+            <div class="social-media">
+                <h3>Suivez-nous</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+
+            <div class="newsletter">
+                <h3>Inscrivez-vous à notre Newsletter</h3>
+                <form action="/subscribe" method="post" class="search-form3">
+                    <input type="email" placeholder="Votre email" class="search-input3" required>
+                    <button type="submit" class = "search-button3">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+        
+         <div class="footer-bottom">
+        <p1>&copy; 2024 JustDreams. Tous droits réservés.</p1>
+        </div>
+    </footer>
+</html>
