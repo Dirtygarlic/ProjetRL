@@ -2,7 +2,7 @@
 /* Début codage CSS du Header--------------------------------------------------------------*/
 
     /* 1_ Parametres generaux pour le Header*/
-   header {
+    header {
         display: flex; /* Utiliser Flexbox pour aligner le contenu */
         justify-content: space-between; /* Espacement entre logo et barre de recherche */
         align-items: center; /* Centrer verticalement les éléments */
@@ -13,46 +13,46 @@
     
     /* 2_ Mise en forme du logo*/
     .image2 {
-        display: flex;
-        justify-content: center; /* centre horizontalement */
-        align-items: center; /* centre verticalement */
-        height: 120px; /* définissez la hauteur souhaitée */
-        border-radius: 10px;
-        
-    }
+        display: flex; /* Utilise flexbox pour centrer l'image */
+        justify-content: center; /* Centre l'image horizontalement */
+        align-items: center; /* Centre l'image verticalement */
+        height: 120px; /* Définit la hauteur de l'image */
+        border-radius: 10px; /* Arrondit les coins de l'image */
+        }
+    
 
     /* 3_ Styles pour le bouton d'ouverture "Se connecter / S inscrire" */
-      .search-button1 {
-        padding: 10px 15px; /* Espacement interne du bouton */
-        background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
-        color: RGB(146, 174, 201);
-        font-size: 20px;
-        border-radius: 4px 4px 4px 4px; /* Arrondir les coins */
-        border:none; 
-        cursor: pointer; /* Curseur en main sur le bouton */
+    .search-button1 {
+        padding: 10px 15px; /* Espace intérieur pour rendre le bouton plus grand */
+        background-color: rgb(230, 220, 212); /* Couleur de fond du bouton */
+        color: RGB(146, 174, 201); /* Couleur du texte du bouton */
+        font-size: 20px; /* Taille de la police pour le texte du bouton */
+        border-radius: 4px; /* Arrondit légèrement les coins du bouton */
+        border: none; /* Supprime la bordure du bouton */
+        cursor: pointer; /* Change le curseur en main lors du survol */
     }
 
     .search-button1:hover {
-        background-color: RGB(146, 174, 201);
-        color: white;
+        background-color: RGB(146, 174, 201); /* Change la couleur de fond au survol */
+        color: white; /* Change la couleur du texte au survol */
     }
 
     /* 4_ Styles pour le conteneur de la fenêtre modale */
-    .reservation-container {
-    display: none; /* Masquer le formulaire par défaut */
-    position: fixed; /* Fixer la position par rapport à la fenêtre */
-    top: 50%; /* Centrer verticalement */
-    left: 50%; /* Centrer horizontalement */
-    transform: translate(-50%, -50%); /* Ajuster pour centrer exactement */
-    background-color : #f0f0f0; /* Couleur de fond */
-    border: 1px solid #ccc; /* Bordure de la fenêtre */
-    padding: 20px; /* Espacement interne */
-    width: 300px;
-    z-index: 1000; /* Placer au-dessus des autres éléments */
-    border-radius: 4px 4px 4px 4px; /* Arrondir les coins à droite */
+.reservation-container {
+    display: none; /* Cache le conteneur par défaut */
+    position: fixed; /* Le conteneur reste fixe par rapport à la fenêtre */
+    top: 50%; /* Place le conteneur au milieu verticalement */
+    left: 50%; /* Place le conteneur au milieu horizontalement */
+    transform: translate(-50%, -50%); /* Centre exactement le conteneur */
+    background-color: #f0f0f0; /* Couleur de fond de la modale */
+    border: 1px solid #ccc; /* Bordure grise autour de la modale */
+    padding: 20px; /* Espace intérieur autour du contenu */
+    width: 300px; /* Largeur fixe de la modale */
+    z-index: 1000; /* Priorité d'affichage élevée */
+    border-radius: 4px; /* Coins arrondis pour la modale */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-
+/* */
     .overlay {
         display: none; /* Masquer par défaut */
         position: fixed; /* Fixer à la fenêtre */
@@ -102,19 +102,21 @@
         color: white;
         border: none;
     }    
-
-    .close-modal {
-        cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
-        font-size: 24px; /* Taille de la croix */
-        color: #333; /* Couleur de la croix */
-        position: absolute; /* Pour placer la croix en haut à droite */
-        top: 10px; /* Ajustez la position verticalement */
-        right: 10px; /* Ajustez la position horizontalement */
-    }
+/* */
+/* Bouton de fermeture de la modale */
+.close-modal {
+    cursor: pointer; /* Change le curseur en main */
+    font-size: 24px; /* Taille de la police pour le symbole de fermeture */
+    color: #333; /* Couleur du symbole de fermeture */
+    position: absolute; /* Position absolue par rapport à la modale */
+    top: 10px; /* Distance par rapport au haut de la modale */
+    right: 10px; /* Distance par rapport au côté droit de la modale */
+}
     
     .close-modal:hover {
         color: red; /* Change la couleur au survol pour indiquer une action */
     }
+/* */
 
    /* Debut du codage bouton rechercher-------------------------------------------------*/
    .search-form2 {
@@ -180,7 +182,7 @@
     }
 
 /* Fin du codage CSS du Header--------------------------------------------------------------*/
-
+/* */
 
 
 /* Debut du codage du bandeau avec les boutons--------------------------------------------- */
@@ -193,20 +195,20 @@
 }
 
 .nav-button {
-    padding: 10px 20px;
-    margin: 0 10px; /* Espacement entre les boutons */
-    background-color: rgb(230, 220, 212);
-    color: #333;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 13px;
+    padding: 10px 20px; /* Espace intérieur pour agrandir les boutons */
+    margin: 0 10px; /* Espace horizontal entre les boutons */
+    background-color: rgb(230, 220, 212); /* Couleur de fond des boutons */
+    color: #333; /* Couleur du texte des boutons */
+    border: none; /* Supprime la bordure des boutons */
+    border-radius: 10px; /* Coins arrondis pour les boutons */
+    font-weight: bold; /* Texte en gras */
+    cursor: pointer; /* Change le curseur en main lors du survol */
+    font-size: 13px; /* Taille de la police des boutons */
 }
 
 .nav-button:hover {
-    background-color: RGB(146, 174, 201);
-    color: white;
+    background-color: RGB(146, 174, 201); /* Change la couleur au survol */
+    color: white; /* Change la couleur du texte au survol */
 }
 
 /* Fin du codage du bandeau avec les boutons--------------------------------------------- */
@@ -216,36 +218,36 @@
 
 /* Styles pour l'arrière-plan */
 .background-image {
-    background-image: url('destinationreve4.tinypng.jpeg'); /* Remplacez par le chemin de votre image */
-    background-size: cover; /* Couvre tout l'espace disponible */
+    background-image: url('/Users/remylenne/Desktop/ProjetRL/Image/destinationreve4.tinypng.jpeg'); /* Remplacez par le chemin de votre image */
+    background-size: cover; /* L'image couvre toute la largeur */
     background-position: center; /* Centre l'image */
-    flex-direction: column;
-    height: 600px; /* Hauteur de l'arrière-plan */
+    flex-direction: column; /* Aligne le contenu en colonne */
+    height: 50vh; /* Hauteur de l'arrière-plan */
     display: flex; /* Pour centrer le contenu si nécessaire */
     align-items: center; /* Centre verticalement le contenu */
     justify-content: center; /* Centre horizontalement le contenu */
     color: white; /* Couleur du texte */
     text-shadow: 2px 2px 2px rgba(1, 1, 1, 1); /* Ombre pour le texte */
-    text-align: center;
+    text-align: center; /* Centre le texte */
 }
 
 h1 {
-    margin-top: 400px; /* Ajustez la valeur selon vos besoins */
-    font-size: 50px;
+    margin-top: 20vh; /* Marge haute pour ajuster la position du titre */
+    font-size: 3em; /* Taille de la police pour le titre */
     }
 
 
 p  {
-    font-size: 30px; /* Taille du paragraphe */
-    margin: -30px; /* Enlever l'espacement par défaut */
+    font-size: 1.5em; /* Taille de la police pour le paragraphe */
+    margin:0; /* Supprime la marge par défaut */
     }
 
 /* Fin du codage de l image en arriere plan et des écritures--------------------------------------------- */
 
 /* Debut du codage FOOTER--------------------------------------------------------------------------------- */
 footer {
-    padding: 20px;
-    background-color: #f0f0f0;
+    padding: 20px; /* Espace intérieur autour du footer */
+    background-color: #f0f0f0; /* Couleur de fond du footer */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -303,12 +305,81 @@ footer {
 }
 /* Fin du codage FOOTER--------------------------------------------------------------------------------- */
 
+/* Rendre le site web responsive-------------------------------------------------------------------------*/
 
+/* Responsivité pour les grands écrans */
+@media (max-width: 1024px) {
+    .background-image {
+        height: 40vh; /* Hauteur réduite de l'image */
+    }
 
+    .nav-button {
+        font-size: 12px; /* Réduit la taille de la police des boutons */
+        padding: 8px 15px; /* Réduit l'espace intérieur */
+    }
+}
 
+/* Responsivité pour les écrans moyens */
+@media (max-width: 768px) {
+    header, .footer-content, .button-bar {
+        flex-direction: column; /* Aligne les éléments en colonne */
+        align-items: center; /* Centre le contenu */
+    }
 
+    .button-bar {
+        padding: 5px; /* Réduit le padding du bandeau */
+    }
 
+    .nav-button {
+        font-size: 11px; /* Réduit la taille des boutons */
+        margin: 5px 0; /* Espace vertical entre les boutons */
+        padding: 8px 15px; /* Réduit l'espace intérieur */
+    }
 
+    .search-button1 {
+        font-size: 18px; /* Taille de police réduite */
+    }
 
+    h1 {
+        font-size: 2em; /* Taille de police réduite pour le titre */
+    }
 
+    p {
+        font-size: 1.2em; /* Taille de police réduite pour le texte */
+    }
+}
 
+/* Responsivité pour les petits écrans */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Aligne les éléments en colonne */
+        padding: 5px 10px; /* Réduit le padding */
+    }
+
+    .background-image {
+        height: 30vh; /* Hauteur réduite de l'image */
+    }
+
+    .nav-button {
+        font-size: 10px; /* Taille de police réduite pour les boutons */
+        padding: 6px 10px; /* Moins d'espace intérieur */
+    }
+
+    .search-button1 {
+        font-size: 16px; /* Réduit la taille de la police */
+        padding: 8px 10px; /* Réduit le padding */
+    }
+
+    h1 {
+        font-size: 1.5em; /* Taille de police réduite pour le titre */
+    }
+
+    p {
+        font-size: 1em; /* Taille de police réduite pour le texte */
+    }
+
+    .footer-content {
+        align-items: center; /* Centre le contenu */
+        text-align: center; /* Centre le texte */
+    }
+}
