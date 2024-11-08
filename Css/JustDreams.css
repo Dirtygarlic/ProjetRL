@@ -1,7 +1,13 @@
     
 /* Début codage CSS du Header--------------------------------------------------------------*/
 
-    /* 1_ Parametres generaux pour le Header*/
+/* 1_ Parametres generaux pour le Header*/
+        
+    * {
+        padding:0;
+        margin:0;
+    }
+
     header {
         display: flex; /* Utiliser Flexbox pour aligner le contenu */
         justify-content: space-between; /* Espacement entre logo et barre de recherche */
@@ -11,7 +17,7 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
     }
     
-    /* 2_ Mise en forme du logo*/
+/* 2_ Mise en forme du logo*/
     .image2 {
         display: flex; /* Utilise flexbox pour centrer l'image */
         justify-content: center; /* Centre l'image horizontalement */
@@ -29,6 +35,7 @@
         font-size: 20px; /* Taille de la police pour le texte du bouton */
         border-radius: 4px; /* Arrondit légèrement les coins du bouton */
         border: none; /* Supprime la bordure du bouton */
+        box-shadow: 1px 1px 1px black;
         cursor: pointer; /* Change le curseur en main lors du survol */
     }
 
@@ -37,22 +44,22 @@
         color: white; /* Change la couleur du texte au survol */
     }
 
-    /* 4_ Styles pour le conteneur de la fenêtre modale */
-.reservation-container {
-    display: none; /* Cache le conteneur par défaut */
-    position: fixed; /* Le conteneur reste fixe par rapport à la fenêtre */
-    top: 50%; /* Place le conteneur au milieu verticalement */
-    left: 50%; /* Place le conteneur au milieu horizontalement */
-    transform: translate(-50%, -50%); /* Centre exactement le conteneur */
-    background-color: #f0f0f0; /* Couleur de fond de la modale */
-    border: 1px solid #ccc; /* Bordure grise autour de la modale */
-    padding: 20px; /* Espace intérieur autour du contenu */
-    width: 300px; /* Largeur fixe de la modale */
-    z-index: 1000; /* Priorité d'affichage élevée */
-    border-radius: 4px; /* Coins arrondis pour la modale */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ /* 4_ Styles pour le conteneur de la fenêtre modale */
+    .reservation-container {
+        display: none; /* Cache le conteneur par défaut */
+        position: fixed; /* Le conteneur reste fixe par rapport à la fenêtre */
+        top: 50%; /* Place le conteneur au milieu verticalement */
+        left: 50%; /* Place le conteneur au milieu horizontalement */
+        transform: translate(-50%, -50%); /* Centre exactement le conteneur */
+        background-color: #f0f0f0; /* Couleur de fond de la modale */
+        border: 1px solid #ccc; /* Bordure grise autour de la modale */
+        padding: 20px; /* Espace intérieur autour du contenu */
+        width: 300px; /* Largeur fixe de la modale */
+        z-index: 1000; /* Priorité d'affichage élevée */
+        border-radius: 4px; /* Coins arrondis pour la modale */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
-/* */
+
     .overlay {
         display: none; /* Masquer par défaut */
         position: fixed; /* Fixer à la fenêtre */
@@ -64,7 +71,7 @@
         z-index: 999; /* Placer sous la modale mais au-dessus du contenu */
     }
 
-    /* Styles pour les éléments du formulaire dans .reservation-container */
+/* Styles pour les éléments du formulaire dans .reservation-container */
     .reservation-container form label {
 
         display: block; /* Définit chaque <label> comme un élément de bloc, ce qui le fait occuper toute la largeur de son conteneur parent */
@@ -102,60 +109,68 @@
         color: white;
         border: none;
     }    
-/* */
+
 /* Bouton de fermeture de la modale */
-.close-modal {
-    cursor: pointer; /* Change le curseur en main */
-    font-size: 24px; /* Taille de la police pour le symbole de fermeture */
-    color: #333; /* Couleur du symbole de fermeture */
-    position: absolute; /* Position absolue par rapport à la modale */
-    top: 10px; /* Distance par rapport au haut de la modale */
-    right: 10px; /* Distance par rapport au côté droit de la modale */
-}
+    .close-modal {
+        cursor: pointer; /* Change le curseur en main */
+        font-size: 24px; /* Taille de la police pour le symbole de fermeture */
+        color: #333; /* Couleur du symbole de fermeture */
+        position: absolute; /* Position absolue par rapport à la modale */
+        top: 10px; /* Distance par rapport au haut de la modale */
+        right: 10px; /* Distance par rapport au côté droit de la modale */
+    }
     
     .close-modal:hover {
         color: red; /* Change la couleur au survol pour indiquer une action */
     }
-/* */
 
-   /* Debut du codage bouton rechercher-------------------------------------------------*/
+/* Debut du codage bouton rechercher-------------------------------------------------*/
    .search-form2 {
-    display: flex; /* Aligne le champ et le bouton en ligne */
+        display: flex; /* Aligne le champ et le bouton en ligne */
     }
 
     .search-input2 {
-    padding: 10px; /* Espacement interne du champ de saisie */
-    font-size: 15px;
-    border: 1px solid #ccc; /* Bordure du champ de saisie */
-    border-radius: 4px 0 0 4px; /* Arrondir les coins à gauche */
-    outline: none; /* Enlève le contour par défaut */
-    background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
-    color: RGB(146, 174, 201);
-    cursor: pointer;
-}
-   .search-button2 {
-    border: none;
-    font-size: 15px;
+        padding: 10px; /* Espacement interne du champ de saisie */
+        font-size: 15px;
+        border: 1px solid #ccc; /* Bordure du champ de saisie */
+        border-radius: 4px 0 0 4px; /* Arrondir les coins à gauche */
+        outline: none; /* Enlève le contour par défaut */
+        background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
+        color: RGB(146, 174, 201);
     }
 
-     /* Style du bouton pour modifier la langue */
-     .dropbtn {
+    .search-input2:hover {
+        cursor: text;
+    }
+
+    .search-form2 i {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .search-form2 i:hover {
+        background-color: RGB(146, 174, 201); /* Change la couleur de fond au survol */
+    }
+
+ /* Style du bouton pour modifier la langue */
+    .dropbtn {
         background-color: #4CAF50; /* Définit la couleur de fond du bouton en vert */
         color: white; /* Définit la couleur du texte en blanc */
         padding: 10px; /* Ajoute un espacement interne autour du texte */
         border: none; /* Supprime les bordures du bouton */
         border-radius: 4px 4px 4px 4px; /* Arrondir les coins à droite */
         cursor: pointer; /* Affiche un curseur de type "main" au survol */
+        box-shadow: 1px 1px 1px black ;
     }
 
-    /* Conteneur de la liste déroulante */
+/* Conteneur de la liste déroulante */
     .dropdown {
         margin-right: 50px;
         position: relative; /* Positionne le conteneur de façon relative pour placer le contenu de la liste en dessous */
         display: inline-block; /* Aligne le conteneur avec d'autres éléments en ligne */
     }
 
-    /* Contenu de la liste déroulante */
+/* Contenu de la liste déroulante */
     .dropdown-content {
         display: none; /* Masque la liste déroulante par défaut */
         position: absolute; /* Positionne la liste par rapport au conteneur parent */
@@ -186,30 +201,33 @@
 
 
 /* Debut du codage du bandeau avec les boutons--------------------------------------------- */
-.button-bar {
-    display: flex;
-    justify-content: center; /* Centre les boutons */
-    background-color: #f0f0f0; /* Couleur de fond du bandeau */
-    padding: 10px 0; /* Espacement vertical du bandeau */
-    border-top: 2px solid #ccc; /* Bordure au-dessus du bandeau */
-}
+    .button-bar {
+        display: flex;
+        justify-content: center; /* Centre les boutons */
+        background-color: #f0f0f0; /* Couleur de fond du bandeau */
+        padding: 10px 0; /* Espacement vertical du bandeau */
+        border-top: 2px solid #ccc; /* Bordure au-dessus du bandeau */
+    }
 
-.nav-button {
-    padding: 10px 20px; /* Espace intérieur pour agrandir les boutons */
-    margin: 0 10px; /* Espace horizontal entre les boutons */
-    background-color: rgb(230, 220, 212); /* Couleur de fond des boutons */
-    color: #333; /* Couleur du texte des boutons */
-    border: none; /* Supprime la bordure des boutons */
-    border-radius: 10px; /* Coins arrondis pour les boutons */
-    font-weight: bold; /* Texte en gras */
-    cursor: pointer; /* Change le curseur en main lors du survol */
-    font-size: 13px; /* Taille de la police des boutons */
-}
+    .nav-button {
+        padding: 10px 20px; /* Espace intérieur pour agrandir les boutons */
+        margin: 0 10px; /* Espace horizontal entre les boutons */
+        background-color: rgb(230, 220, 212); /* Couleur de fond des boutons */
+        color: #333; /* Couleur du texte des boutons */
+        border: none; /* Supprime la bordure des boutons */
+        border-radius: 10px; /* Coins arrondis pour les boutons */
+        box-shadow: 1px 1px 1px black;
+        font-weight: bold; /* Texte en gras */
+        cursor: pointer; /* Change le curseur en main lors du survol */
+        font-size: 13px; /* Taille de la police des boutons */
+        text-decoration: none;
+        
+    }
 
-.nav-button:hover {
-    background-color: RGB(146, 174, 201); /* Change la couleur au survol */
-    color: white; /* Change la couleur du texte au survol */
-}
+    .nav-button:hover {
+        background-color: RGB(146, 174, 201); /* Change la couleur au survol */
+        color: white; /* Change la couleur du texte au survol */
+    }
 
 /* Fin du codage du bandeau avec les boutons--------------------------------------------- */
 
@@ -217,92 +235,92 @@
 /* Debut du codage de l image en arriere plan et des écritures--------------------------- */
 
 /* Styles pour l'arrière-plan */
-.background-image {
-    background-image: url('/Users/remylenne/Desktop/ProjetRL/Image/destinationreve4.tinypng.jpeg'); /* Remplacez par le chemin de votre image */
-    background-size: cover; /* L'image couvre toute la largeur */
-    background-position: center; /* Centre l'image */
-    flex-direction: column; /* Aligne le contenu en colonne */
-    height: 50vh; /* Hauteur de l'arrière-plan */
-    display: flex; /* Pour centrer le contenu si nécessaire */
-    align-items: center; /* Centre verticalement le contenu */
-    justify-content: center; /* Centre horizontalement le contenu */
-    color: white; /* Couleur du texte */
-    text-shadow: 2px 2px 2px rgba(1, 1, 1, 1); /* Ombre pour le texte */
-    text-align: center; /* Centre le texte */
-}
-
-h1 {
-    margin-top: 20vh; /* Marge haute pour ajuster la position du titre */
-    font-size: 3em; /* Taille de la police pour le titre */
+    .background-image {
+        background-image: url('/Users/remylenne/Desktop/ProjetRL/Image/destinationreve4.tinypng.jpeg'); /* Remplacez par le chemin de votre image */
+        background-size: cover; /* L'image couvre toute la largeur */
+        background-position: center; /* Centre l'image */
+        flex-direction: column; /* Aligne le contenu en colonne */
+        height: 50vh; /* Hauteur de l'arrière-plan */
+        display: flex; /* Pour centrer le contenu si nécessaire */
+        align-items: center; /* Centre verticalement le contenu */
+        justify-content: center; /* Centre horizontalement le contenu */
+        color: white; /* Couleur du texte */
+        text-shadow: 2px 2px 2px rgba(1, 1, 1, 1); /* Ombre pour le texte */
+        text-align: center; /* Centre le texte */
     }
 
+    h1 {
+        margin-top: 20vh; /* Marge haute pour ajuster la position du titre */
+        font-size: 3em; /* Taille de la police pour le titre */
+        }
 
-p  {
-    font-size: 1.5em; /* Taille de la police pour le paragraphe */
-    margin:0; /* Supprime la marge par défaut */
-    }
+
+    p  {
+        font-size: 1.5em; /* Taille de la police pour le paragraphe */
+        margin:0; /* Supprime la marge par défaut */
+        }
 
 /* Fin du codage de l image en arriere plan et des écritures--------------------------------------------- */
 
-/* Debut du codage FOOTER--------------------------------------------------------------------------------- */
-footer {
-    padding: 20px; /* Espace intérieur autour du footer */
-    background-color: #f0f0f0; /* Couleur de fond du footer */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+ /* Debut du codage FOOTER--------------------------------------------------------------------------------- */
+    footer {
+        padding: 20px; /* Espace intérieur autour du footer */
+        background-color: #f0f0f0; /* Couleur de fond du footer */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
 
 /* Conteneur principal de contenu dans le pied de page */
-.footer-content {
-    display: flex; /* Utilise Flexbox pour aligner les éléments enfants horizontalement */
-    justify-content: space-around; /* Espacement égal autour de chaque div */
-    flex-wrap: wrap; /* Permet aux divs de passer à la ligne si l'espace horizontal est insuffisant */
-    margin-bottom: 10px; /* Espace en bas du conteneur pour séparer du contenu suivant */
-}
+    .footer-content {
+        display: flex; /* Utilise Flexbox pour aligner les éléments enfants horizontalement */
+        justify-content: space-around; /* Espacement égal autour de chaque div */
+        flex-wrap: wrap; /* Permet aux divs de passer à la ligne si l'espace horizontal est insuffisant */
+        margin-bottom: 10px; /* Espace en bas du conteneur pour séparer du contenu suivant */
+    }
 
 /* Styles pour chaque section individuelle à l'intérieur du pied de page */
-.footer-content div {
-    flex: 1; /* Permet à chaque div de s'étirer également */
-    min-width: 200px; /* Assure que chaque div a une largeur minimale de 200px */
-    margin: 10px; /* Ajoute un espacement autour de chaque div */
-}
+    .footer-content div {
+        flex: 1; /* Permet à chaque div de s'étirer également */
+        min-width: 200px; /* Assure que chaque div a une largeur minimale de 200px */
+        margin: 10px; /* Ajoute un espacement autour de chaque div */
+    }
 
-.search-form3 {
-    display: flex; /* Aligne le champ et le bouton en ligne */
-}
+    .search-form3 {
+        display: flex; /* Aligne le champ et le bouton en ligne */
+    }
 
-.search-input3 {
-    padding: 10px; /* Espacement interne du champ de saisie */
-    font-size: 15px;
-    border: 1px solid #ccc; /* Bordure du champ de saisie */
-    border-radius: 4px 0 0 4px; /* Arrondir les coins à gauche */
-    outline: none; /* Enlève le contour par défaut */
-}
+    .search-input3 {
+        padding: 10px; /* Espacement interne du champ de saisie */
+        font-size: 15px;
+        border: 1px solid #ccc; /* Bordure du champ de saisie */
+        border-radius: 4px 0 0 4px; /* Arrondir les coins à gauche */
+        outline: none; /* Enlève le contour par défaut */
+    }
 
-.search-button3:hover {
-    background-color: RGB(146, 174, 201);
-    color: white;
-}
+    .search-button3:hover {
+        background-color: RGB(146, 174, 201);
+        color: white;
+    }
 
-.search-button3 {
-    padding: 10px 15px; /* Espacement interne du bouton */
-    border: 1px solid #ccc; /* Bordure du bouton */
-    border-left: none; /* Enlève la bordure à gauche pour un effet uniforme */
-    background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
-    color: RGB(146, 174, 201);
-    font-size: 15px;
-    font-weight: bold; /* Couleur du texte */
-    border-radius: 0 4px 4px 0; /* Arrondir les coins à droite */
-    cursor: pointer; /* Change le curseur lors du survol */
-}
+    .search-button3 {
+        padding: 10px 15px; /* Espacement interne du bouton */
+        border: 1px solid #ccc; /* Bordure du bouton */
+        border-left: none; /* Enlève la bordure à gauche pour un effet uniforme */
+        background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
+        color: RGB(146, 174, 201);
+        font-size: 15px;
+        font-weight: bold; /* Couleur du texte */
+        border-radius: 0 4px 4px 0; /* Arrondir les coins à droite */
+        cursor: pointer; /* Change le curseur lors du survol */
+    }
 
 /* Conteneur pour le bas du pied de page */
-.footer-bottom {
-    text-align: left; /* Aligne le texte à gauche */
-    font-size: 0.9em; /* Taille de police légèrement réduite */
-    color: #333; /* Couleur de texte */
-    padding-top: 10px; /* Espacement en haut pour séparer de la section précédente */
-    border-top: 1px solid #ccc; /* Ajoute une ligne de séparation en haut */
-}
+    .footer-bottom {
+        text-align: left; /* Aligne le texte à gauche */
+        font-size: 0.9em; /* Taille de police légèrement réduite */
+        color: #333; /* Couleur de texte */
+        padding-top: 10px; /* Espacement en haut pour séparer de la section précédente */
+        border-top: 1px solid #ccc; /* Ajoute une ligne de séparation en haut */
+    }
 /* Fin du codage FOOTER--------------------------------------------------------------------------------- */
 
 /* Rendre le site web responsive-------------------------------------------------------------------------*/
