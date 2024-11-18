@@ -1,13 +1,16 @@
+
+
+/* Paramètres généraux */
+    * {
+        padding: 0; /* Supprime les marges internes par défaut */
+        margin: 0; /* Supprime les marges externes par défaut */
+        box-sizing: border-box; /* Inclut la bordure et le padding dans la taille totale des éléments */
+    }
+
     
 /* Début codage CSS du Header--------------------------------------------------------------*/
 
-/* 1_ Parametres generaux pour le Header*/
-        
-    * {
-        padding:0;
-        margin:0;
-    }
-
+/* Header */
     header {
         display: flex; /* Utiliser Flexbox pour aligner le contenu */
         justify-content: space-between; /* Espacement entre logo et barre de recherche */
@@ -27,8 +30,8 @@
         }
     
 
-    /* 3_ Styles pour le bouton d'ouverture "Se connecter / S inscrire" */
-    .search-button1 {
+ /* 3_ Styles pour le bouton d'ouverture "Se connecter / S inscrire" */
+    .search-button1, .search-button2 {
         padding: 10px 15px; /* Espace intérieur pour rendre le bouton plus grand */
         background-color: rgb(230, 220, 212); /* Couleur de fond du bouton */
         color: RGB(146, 174, 201); /* Couleur du texte du bouton */
@@ -39,78 +42,71 @@
         cursor: pointer; /* Change le curseur en main lors du survol */
     }
 
-    .search-button1:hover {
+    .search-button1:hover,
+    .search-button2:hover {
         background-color: RGB(146, 174, 201); /* Change la couleur de fond au survol */
         color: white; /* Change la couleur du texte au survol */
     }
 
- /* 4_ Styles pour le conteneur de la fenêtre modale */
+/* 4_ Styles pour le conteneur de la fenêtre modale */
+    .reservation-container,.overlay {
+        display: none; /* Cachée par défaut */
+        position: fixed; /* Fixe la position par rapport à la fenêtre */
+        top: 50%; /* Centre verticalement */
+        left: 50%; /* Centre horizontalement */
+        transform: translate(-50%, -50%); /* Ajuste le centrage */
+        z-index: 1000; /* Priorité d'affichage */
+    }
+    
     .reservation-container {
-        display: none; /* Cache le conteneur par défaut */
-        position: fixed; /* Le conteneur reste fixe par rapport à la fenêtre */
-        top: 50%; /* Place le conteneur au milieu verticalement */
-        left: 50%; /* Place le conteneur au milieu horizontalement */
-        transform: translate(-50%, -50%); /* Centre exactement le conteneur */
-        background-color: #f0f0f0; /* Couleur de fond de la modale */
-        border: 1px solid #ccc; /* Bordure grise autour de la modale */
-        padding: 20px; /* Espace intérieur autour du contenu */
-        width: 300px; /* Largeur fixe de la modale */
-        z-index: 1000; /* Priorité d'affichage élevée */
-        border-radius: 4px; /* Coins arrondis pour la modale */
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        background-color: #f0f0f0; /* Fond de la modale */
+        border: 1px solid #ccc; /* Bordure grise */
+        padding: 20px; /* Espacement interne */
+        width: 300px; /* Largeur fixe */
+        border-radius: 4px; /* Coins arrondis */
     }
-
+    
     .overlay {
-        display: none; /* Masquer par défaut */
-        position: fixed; /* Fixer à la fenêtre */
-        top: 0;
-        left: 0;
-        width: 100%; /* Prendre toute la largeur */
-        height: 100%; /* Prendre toute la hauteur */
-        background-color: rgba(0, 0, 0, 0.5); /* Couleur noire avec transparence */
-        z-index: 999; /* Placer sous la modale mais au-dessus du contenu */
+        width: 100%; /* Prend toute la largeur de la fenêtre */
+        height: 100%; /* Prend toute la hauteur de la fenêtre */
+        background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+        z-index: 999; /* Priorité d'affichage sous la modale */
     }
-
 /* Styles pour les éléments du formulaire dans .reservation-container */
-    .reservation-container form label {
+    .reservation-container label {
 
         display: block; /* Définit chaque <label> comme un élément de bloc, ce qui le fait occuper toute la largeur de son conteneur parent */
         width: 100%; /* Définit la largeur du <label> à 100% de son conteneur parent */
         text-align: left; /* Aligne le texte à gauche dans chaque <label> */
         margin-bottom: 5px; /* Ajoute un espace de 5 pixels sous chaque <label> pour séparer visuellement les éléments */
         font-size: 17px; /* Police du text du <label>*/
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     
-    .reservation-container form input {
+    .reservation-container input {
         width: 100%; /* Définit la largeur de l'élément <input> pour qu'il occupe toute la largeur du conteneur parent */
-        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale de l'élément, pour éviter qu'il dépasse */
         padding: 4px; /* Ajoute un espacement intérieur de 8 pixels autour du texte à l'intérieur de l'élément <input> */
         margin-bottom: 15px; /* Ajoute un espace de 15 pixels sous chaque élément <input> pour créer un espacement entre les champs */
         border: 1px solid #ccc; /* Applique une bordure grise de 1 pixel autour de l'élément <input> */
         border-radius: 5px; /* Arrondit les coins de l'élément <input> avec un rayon de 5 pixels */
         font-size: 15px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
+/* Bouton de fermeture de la modale */
     .create-account, .forgot-password, .btn-submit {
-        margin-top: 15px;
-        padding: 10px;
-        width: 100%;
-        background-color: #333;
-        color: white;
-        border-radius: 4px 4px 4px 4px; /* Arrondir les coins à droite */
-        cursor: pointer;
-        font-size: 15px;
+        margin-top: 15px; /* Espace au-dessus */
+        padding: 10px; /* Espacement interne */
+        width: 100%; /* Largeur de 100% */
+        border-radius: 4px; /* Coins arrondis */
+        cursor: pointer; /* Curseur de clic */
+        font-size: 15px; /* Taille de la police */
     }
 
     .forgot-password, .create-account {
-        background-color: #00ccff;
-        color: white;
-        border: none;
+        background-color: #00ccff; /* Couleur de fond */
+        color: white; /* Couleur du texte */
+        border: none; /* Pas de bordure */
     }    
 
-/* Bouton de fermeture de la modale */
     .close-modal {
         cursor: pointer; /* Change le curseur en main */
         font-size: 24px; /* Taille de la police pour le symbole de fermeture */
@@ -125,30 +121,29 @@
     }
 
 /* Debut du codage bouton rechercher-------------------------------------------------*/
-   .search-form2 {
+   .search-form3 {
         display: flex; /* Aligne le champ et le bouton en ligne */
     }
 
-    .search-input2 {
+    .search-input3 {
         padding: 10px; /* Espacement interne du champ de saisie */
-        font-size: 15px;
+        font-size: 15px; /* Taille de la police */
         border: 1px solid #ccc; /* Bordure du champ de saisie */
         border-radius: 4px 0 0 4px; /* Arrondir les coins à gauche */
-        outline: none; /* Enlève le contour par défaut */
         background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
         color: RGB(146, 174, 201);
     }
 
-    .search-input2:hover {
+    .search-input3:hover {
         cursor: text;
     }
 
-    .search-form2 i {
+    .search-form3 i {
         width: 30px;
         cursor: pointer;
     }
 
-    .search-form2 i:hover {
+    .search-form3 i:hover {
         background-color: RGB(146, 174, 201); /* Change la couleur de fond au survol */
     }
 
@@ -158,7 +153,7 @@
         color: white; /* Définit la couleur du texte en blanc */
         padding: 10px; /* Ajoute un espacement interne autour du texte */
         border: none; /* Supprime les bordures du bouton */
-        border-radius: 4px 4px 4px 4px; /* Arrondir les coins à droite */
+        border-radius: 4px; /* Arrondir les coins à droite */
         cursor: pointer; /* Affiche un curseur de type "main" au survol */
         box-shadow: 1px 1px 1px black ;
     }
@@ -207,6 +202,8 @@
         background-color: #f0f0f0; /* Couleur de fond du bandeau */
         padding: 10px 0; /* Espacement vertical du bandeau */
         border-top: 2px solid #ccc; /* Bordure au-dessus du bandeau */
+        position : sticky; /* Fixer la barre de navigation lorsqu on scroll */
+        top : 0; /* La barre de navigation reste en haut */
     }
 
     .nav-button {
@@ -220,8 +217,7 @@
         font-weight: bold; /* Texte en gras */
         cursor: pointer; /* Change le curseur en main lors du survol */
         font-size: 13px; /* Taille de la police des boutons */
-        text-decoration: none;
-        
+        text-decoration: none; 
     }
 
     .nav-button:hover {
@@ -284,11 +280,11 @@
         margin: 10px; /* Ajoute un espacement autour de chaque div */
     }
 
-    .search-form3 {
+    .search-form4 {
         display: flex; /* Aligne le champ et le bouton en ligne */
     }
 
-    .search-input3 {
+    .search-input4 {
         padding: 10px; /* Espacement interne du champ de saisie */
         font-size: 15px;
         border: 1px solid #ccc; /* Bordure du champ de saisie */
@@ -296,12 +292,12 @@
         outline: none; /* Enlève le contour par défaut */
     }
 
-    .search-button3:hover {
+    .search-button4:hover {
         background-color: RGB(146, 174, 201);
         color: white;
     }
 
-    .search-button3 {
+    .search-button4 {
         padding: 10px 15px; /* Espacement interne du bouton */
         border: 1px solid #ccc; /* Bordure du bouton */
         border-left: none; /* Enlève la bordure à gauche pour un effet uniforme */

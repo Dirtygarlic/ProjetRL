@@ -19,7 +19,11 @@
                 <img src="Image/JustDreamslogo.jpg" alt="Logo du site JustDreams" class="image2">
            </div>
 
-            <button type="submit" class="search-button1" onclick="toggleLoginForm()">Se connecter / S'incrire</button>
+            <button type="submit" class="search-button1" onclick="toggleLoginForm()">Se connecter / S'inscrire</button>
+
+            <a href="reservations.html" target="_blank">
+                <button type="button" class="search-button2">Réserver</button>
+            </a>
 
             <div id="overlay" class="overlay"></div>
             <div id="loginForm" class="reservation-container">
@@ -42,12 +46,11 @@
 
                     <div class="close-modal" onclick="toggleLoginForm()">&times;</div>
                 </form>
-    
             </div>
 
-            <form action="/search" method="get" class="search-form2">
-                <input type="text" placeholder="Destination de vos rêves?" class="search-input2">
-                <button type="submit" classe = "search-button2">
+            <form action="/search" method="get" class="search-form3">
+                <input type="text" placeholder="Destination de vos rêves?" class="search-input3">
+                <button type="submit" classe = "search-button3">
                     <i class="fas fa-search"></i> <!-- Icône de loupe -->
                 </button>
             </form>
@@ -71,32 +74,31 @@
         </header>
         <!--fin de l en-tête du site-->
         
-            <!-- Bandeau qui sert à inserer plusieurs boutons -->
-            <nav class="button-bar">
-                <a href = "notre-reve.html" class="nav-button">Notre rêve</a>
-                <a href = "hotels.html" class="nav-button">Hôtels</a>
-                <a href = "vols.html" class="nav-button">Vols</a>
-                <a href = "hotels et vols.html" class="nav-button">Hôtels + Vols</a>
-                <a href = "voitures.html" class="nav-button">Voitures</a>
-                <a href = "restaurants.html" class="nav-button">Restaurants</a>
-                <a href = "bateaux.html" class="nav-button">Bateaux</a>
-                <a href = "promotions.html" class="nav-button">Promotions</a>
-                <a href = "meilleurs avis.html" class="nav-button">Les meilleurs avis</a>
-                <a href = "contact.html" class="nav-button">Contact</a>
-            </nav>
+        <!-- Bandeau qui sert à inserer plusieurs boutons -->
+        <nav class="button-bar">
+            <a href = "presentation.html" class="nav-button" target="_blank">Notre rêve</a>
+            <a href = "hotels.html" class="nav-button" target="_blank">Hôtels</a>
+            <a href = "vols.html" class="nav-button" target="_blank">Vols</a>
+            <a href = "hotels et vols.html" class="nav-button" target="_blank">Hôtels + Vols</a>
+            <a href = "voitures.html" class="nav-button" target="_blank">Voitures</a>
+            <a href = "restaurants.html" class="nav-button" target="_blank">Restaurants</a>
+            <a href = "bateaux.html" class="nav-button" target="_blank">Bateaux</a>
+            <a href = "promotions.html" class="nav-button" target="_blank">Promotions</a>
+            <a href = "meilleurs avis.html" class="nav-button" target="_blank">Les meilleurs avis</a>
+            <a href = "contact.html" class="nav-button" target="_blank">Contact</a>
+        </nav>
 
-          <!-- Insertion d'un arriere plan grâce à une div -->
+        <!-- Insertion d'un arriere plan grâce à une div -->
         <div class="background-image">
-            <!-- Vous pouvez ajouter du contenu ici, si nécessaire -->
             <h1>Bienvenue sur Just Dreams</h1>
             <p>Vivez vos rêves</p>
-
         </div>
+
         <footer>
             <div class="footer-content">
                 <div class="contact-info">
                     <h3>Contact</h3>
-                    <p1><strong>Adresse :</strong> 123 Rue Exemple, Paris, France</p1><br>
+                    <p1><strong>Adresse :</strong> 777 Rue du Paradis, Paris, France</p1><br>
                     <p1><strong>Téléphone :</strong> +33 1 23 45 67 89</p1><br>
                     <p1><strong>Email :</strong> justdreams@gmail.com</p1>
                 </div>
@@ -122,9 +124,9 @@
     
                 <div class="newsletter">
                     <h3>Inscrivez-vous à notre Newsletter</h3>
-                    <form action="/subscribe" method="post" class="search-form3">
-                        <input type="email" placeholder="Votre email" class="search-input3" required>
-                        <button type="submit" class = "search-button3">S'inscrire</button>
+                    <form action="/subscribe" method="post" class="search-form4">
+                        <input type="email" placeholder="Votre email" class="search-input4" required>
+                        <button type="submit" class = "search-button4">S'inscrire</button>
                     </form>
                 </div>
             </div>

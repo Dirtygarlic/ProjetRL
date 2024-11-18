@@ -49,8 +49,25 @@ document.querySelector("form").addEventListener("submit", function(event) {
     }
 });
 
+// script.js
 
-// Changer la langue (simplement un exemple pour changer l'URL ou le contenu)
+// Fonction pour changer la langue
+function changeLanguage(language) {
+    // Sélectionner tous les éléments avec un attribut data-en ou data-fr
+    const elements = document.querySelectorAll('[data-en], [data-fr], [data-es]');
+
+    // Parcourir chaque élément et mettre à jour son contenu
+    elements.forEach(element => {
+        if (language === 'fr') {
+            element.textContent = element.getAttribute('data-fr') || element.textContent;
+        } else if (language === 'en') {
+            element.textContent = element.getAttribute('data-en') || element.textContent;
+        }
+    });
+}
+
+
+/* Changer la langue (simplement un exemple pour changer l'URL ou le contenu)
 function changeLanguage(lang) {
     if (lang === 'fr') {
         window.location.href = "/fr";
@@ -74,6 +91,7 @@ function changeLanguage(lang) {
         window.location.href = "/ur";
     }
 }
+*/
 
 // Fermer le menu déroulant si on clique en dehors
 window.onclick = function(event) {
