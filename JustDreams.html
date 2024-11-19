@@ -21,10 +21,6 @@
 
             <button type="submit" class="search-button1" onclick="toggleLoginForm()">Se connecter / S'inscrire</button>
 
-            <a href="reservations.html" target="_blank">
-                <button type="button" class="search-button2">Réserver</button>
-            </a>
-
             <div id="overlay" class="overlay"></div>
             <div id="loginForm" class="reservation-container">
                 <div class="close-modal" onclick="toggleLoginForm()">&times;</div>                   
@@ -48,12 +44,22 @@
                 </form>
             </div>
 
-            <form action="/search" method="get" class="search-form3">
-                <input type="text" placeholder="Destination de vos rêves?" class="search-input3">
-                <button type="submit" classe = "search-button3">
-                    <i class="fas fa-search"></i> <!-- Icône de loupe -->
-                </button>
-            </form>
+            <div class="reservation-container2"> <!--boutons destination, dates de reservation et personnes-->
+                <form action="/search" method="get" class="search-form3">
+                    <input type="text" placeholder="Destination de vos rêves?" class="search-input3">
+                </form>
+
+                <form action="/search" method="get" class="search-form4">
+                    <input type="text" placeholder="Date de depart - Date de retour" class="search-input4">
+                </form>
+
+                <form action="/search" method="get" class="search-form5">
+                    <input type="text" placeholder="2 adultes - 0 enfant - 1 chambre" class="search-input5">
+                </form>
+
+                <button type="submit" class="search-button2">Rechercher</button>
+
+            </div>
 
             <div class="dropdown">
                 <button onclick="toggleDropdown()" class="dropbtn">Langue</button>
@@ -73,7 +79,6 @@
 
         </header>
         <!--fin de l en-tête du site-->
-        
         <!-- Bandeau qui sert à inserer plusieurs boutons -->
         <nav class="button-bar">
             <a href = "presentation.html" class="nav-button" target="_blank">Notre rêve</a>
@@ -91,16 +96,16 @@
         <!-- Insertion d'un arriere plan grâce à une div -->
         <div class="background-image">
             <h1>Bienvenue sur Just Dreams</h1>
-            <p>Vivez vos rêves</p>
+                <p class="p1">Vivez vos rêves</p>
         </div>
 
         <footer>
             <div class="footer-content">
                 <div class="contact-info">
                     <h3>Contact</h3>
-                    <p1><strong>Adresse :</strong> 777 Rue du Paradis, Paris, France</p1><br>
-                    <p1><strong>Téléphone :</strong> +33 1 23 45 67 89</p1><br>
-                    <p1><strong>Email :</strong> justdreams@gmail.com</p1>
+                    <p class="p2"><strong>Adresse :</strong> 777 Rue du Paradis, Paris, France</p>
+                    <p class="p2"><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                    <p class="p2"><strong>Email :</strong> justdreams@gmail.com</p>
                 </div>
     
                 <div class="useful-links">
@@ -124,17 +129,17 @@
     
                 <div class="newsletter">
                     <h3>Inscrivez-vous à notre Newsletter</h3>
-                    <form action="/subscribe" method="post" class="search-form4">
-                        <input type="email" placeholder="Votre email" class="search-input4" required>
-                        <button type="submit" class = "search-button4">S'inscrire</button>
+                    <form action="/subscribe" method="post" class="search-form6">
+                        <input type="email" placeholder="Votre email" class="search-input6" required>
+                        <button type="submit" class= "search-button6">S'inscrire</button>
                     </form>
                 </div>
             </div>
             
              <div class="footer-bottom">
-            <p1>&copy; 2024 JustDreams. Tous droits réservés.</p1>
+            <p class="p3">&copy; 2024 JustDreams. Tous droits réservés.</p>
             </div>
         </footer>
-        <script type="text/javascript" src="Js/JustDreams.js"></script>
+        <script src="Js/JustDreams.js" defer></script>
     </body>
 </html>

@@ -31,7 +31,7 @@
     
 
  /* 3_ Styles pour le bouton d'ouverture "Se connecter / S inscrire" */
-    .search-button1, .search-button2 {
+    .search-button1 {
         padding: 10px 15px; /* Espace intérieur pour rendre le bouton plus grand */
         background-color: rgb(230, 220, 212); /* Couleur de fond du bouton */
         color: RGB(146, 174, 201); /* Couleur du texte du bouton */
@@ -121,30 +121,56 @@
     }
 
 /* Debut du codage bouton rechercher-------------------------------------------------*/
-   .search-form3 {
-        display: flex; /* Aligne le champ et le bouton en ligne */
+   .reservation-container2 {
+        display:flex;
+        gap:0px;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+   }
+
+    .search-button2 {
+        padding: 10px; /* Espace intérieur pour rendre le bouton plus grand */
+        background-color : #f0f0f0; /* Couleur de fond du header */
+        color: RGB(146, 174, 201); /* Couleur du texte du bouton */
+        text-align: center;
+        font-size:15px;
+        font-weight:bold;
+        border: 4px solid RGB(146, 174, 201); /* Bordure du champ de saisie */
+        border-radius: 0px 4px 4px 0px;
+        cursor: pointer; /* Change le curseur en main lors du survol */
+    }
+
+    .search-form3,
+    .search-form4,
+    .search-form5 {
+        margin: 0; /* Supprime les marges externes pour éviter les décalages entre les formulaires */
+    }
+
+    .search-input3, .search-input4, .search-input5 {
+        padding: 10px; /* Espacement interne du champ de saisie */
+        font-size: 15px; /* Taille de la police */
+        border: 4px solid RGB(146, 174, 201); /* Bordure du champ de saisie */
+        background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
+        color: RGB(146, 174, 201);
+        width: 220px;
     }
 
     .search-input3 {
-        padding: 10px; /* Espacement interne du champ de saisie */
-        font-size: 15px; /* Taille de la police */
-        border: 1px solid #ccc; /* Bordure du champ de saisie */
-        border-radius: 4px 0 0 4px; /* Arrondir les coins à gauche */
-        background-color: rgb(230, 220, 212) ; /* Couleur de fond du bouton */
-        color: RGB(146, 174, 201);
+        border-radius: 4px 0px 0px 4px;
     }
 
-    .search-input3:hover {
-        cursor: text;
+    .search-input4, .search-input5 {
+        width:250px;
     }
 
-    .search-form3 i {
-        width: 30px;
-        cursor: pointer;
-    }
-
-    .search-form3 i:hover {
+    .search-button2:hover {
         background-color: RGB(146, 174, 201); /* Change la couleur de fond au survol */
+        color: white; /* Change la couleur du texte au survol */
+    }
+
+    .search-input3:hover, .search-input4:hover, .search-input5:hover {
+        cursor: text;
     }
 
  /* Style du bouton pour modifier la langue */
@@ -251,7 +277,7 @@
         }
 
 
-    p  {
+    .p1 {
         font-size: 1.5em; /* Taille de la police pour le paragraphe */
         margin:0; /* Supprime la marge par défaut */
         }
@@ -263,6 +289,10 @@
         padding: 20px; /* Espace intérieur autour du footer */
         background-color: #f0f0f0; /* Couleur de fond du footer */
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    h3 {
+        margin-bottom: 10px;
     }
 
 /* Conteneur principal de contenu dans le pied de page */
@@ -280,11 +310,11 @@
         margin: 10px; /* Ajoute un espacement autour de chaque div */
     }
 
-    .search-form4 {
+    .search-form6 {
         display: flex; /* Aligne le champ et le bouton en ligne */
     }
 
-    .search-input4 {
+    .search-input6 {
         padding: 10px; /* Espacement interne du champ de saisie */
         font-size: 15px;
         border: 1px solid #ccc; /* Bordure du champ de saisie */
@@ -292,12 +322,12 @@
         outline: none; /* Enlève le contour par défaut */
     }
 
-    .search-button4:hover {
+    .search-button6:hover {
         background-color: RGB(146, 174, 201);
         color: white;
     }
 
-    .search-button4 {
+    .search-button6 {
         padding: 10px 15px; /* Espacement interne du bouton */
         border: 1px solid #ccc; /* Bordure du bouton */
         border-left: none; /* Enlève la bordure à gauche pour un effet uniforme */
@@ -358,7 +388,7 @@
         font-size: 2em; /* Taille de police réduite pour le titre */
     }
 
-    p {
+    .p1 {
         font-size: 1.2em; /* Taille de police réduite pour le texte */
     }
 }
@@ -388,7 +418,7 @@
         font-size: 1.5em; /* Taille de police réduite pour le titre */
     }
 
-    p {
+    .p1 {
         font-size: 1em; /* Taille de police réduite pour le texte */
     }
 
