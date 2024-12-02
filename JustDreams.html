@@ -9,7 +9,7 @@
         <title> JustDreams - Réservez votre prochain voyage  </title>
         <link rel="stylesheet" href="Css/JustDreams.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+        <link rel="icon" href="Image/JustDreams.ico" type="image/x-icon">
    </head>
 
    <body>
@@ -45,20 +45,15 @@
             </div>
 
             <div class="reservation-container2"> <!--boutons destination, dates de reservation et personnes-->
-                <form action="/search" method="get" class="search-form3">
-                    <input type="text" placeholder="Destination de vos rêves?" class="search-input3">
-                </form>
-
-                <form action="/search" method="get" class="search-form4">
-                    <input type="text" placeholder="Date de depart - Date de retour" class="search-input4">
-                </form>
-
-                <form action="/search" method="get" class="search-form5">
+                <div class="autoComplete">
+                    <input type="text" placeholder="Destination de vos rêves?" class="search-input3" onkeyup="autoComplete()">
+                    <ul id="suggestions"></ul>
+                </div>
+                    <input id="date-range" type="text" placeholder="Date de départ - Date de retour" class="search-input4">
+               
                     <input type="text" placeholder="2 adultes - 0 enfant - 1 chambre" class="search-input5">
-                </form>
 
-                <button type="submit" class="search-button2">Rechercher</button>
-
+                    <input type="submit" class="search-button2" value="Rechercher">
             </div>
 
             <div class="dropdown">
